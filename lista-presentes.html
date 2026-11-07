@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lista de presentes – Chá da nossa Casa Nova</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina-lista">
+<main class="folha">
+
+  <!-- Etapa 1: escolher presentes -->
+  <section id="etapa-lista">
+    <div class="selo">🏡</div>
+    <h1>Escolha seu presente</h1>
+    <p class="intro">Sua presença já é um presente! Mas, se quiser nos ajudar a montar nosso novo lar, preparamos algumas sugestões. ♡</p>
+    <p id="aviso" class="aviso" role="status" hidden></p>
+    <nav id="categorias" class="chips" aria-label="Categorias"></nav>
+    <ul id="presentes" class="presentes"></ul>
+
+    <div class="outro">
+      <button type="button" class="link" id="btn-outro">＋ Outro presente</button>
+      <input type="text" id="outro-texto" maxlength="100" placeholder="O que você pretende levar?" hidden>
+    </div>
+
+    <button class="btn btn-principal btn-bloco" id="btn-continuar" type="button">Continuar →</button>
+    <a class="voltar" href="index.html">← Voltar ao convite</a>
+  </section>
+
+  <!-- Etapa 2: resumo + nome -->
+  <section id="etapa-confirma" hidden>
+    <div class="selo ok">✓</div>
+    <h1>Só falta confirmar!</h1>
+    <p class="intro">Confira os presentes selecionados:</p>
+    <ul id="resumo" class="resumo"></ul>
+    <label for="nome" class="rotulo">Seu nome:</label>
+    <input type="text" id="nome" maxlength="80" placeholder="Digite seu nome aqui…" autocomplete="name">
+    <p id="erro" class="aviso" role="alert" hidden></p>
+    <button class="btn btn-principal btn-bloco" id="btn-confirmar" type="button">Confirmar presença</button>
+    <button class="link" id="btn-editar" type="button">← Alterar presentes</button>
+  </section>
+
+  <!-- Etapa 3: sucesso -->
+  <section id="etapa-ok" hidden>
+    <div class="selo">♥</div>
+    <h1>Presença confirmada!</h1>
+    <p class="intro">Obrigado por fazer parte desse começo ♡</p>
+    <ul id="registrados" class="resumo"></ul>
+    <a class="btn btn-claro btn-bloco" href="index.html">Voltar ao convite</a>
+  </section>
+
+</main>
+<script type="module" src="lista-presentes.js"></script>
+</body>
+</html>

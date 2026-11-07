@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;700&family=Montserrat:wght@400;500;600&display=swap');
+
+:root{
+  --marfim:#FDF7EC; --rose-queimado:#924B49; --rose-antigo:#B46F6B;
+  --rose-claro:#E9D8D0; --vinho:#4A3030; --branco:#FFFFFF;
+  --serif:'Bodoni Moda',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:Montserrat,system-ui,sans-serif;color:var(--vinho);line-height:1.5;
+  background:
+    repeating-linear-gradient(0deg,rgba(146,75,73,.03) 0 2px,transparent 2px 5px),
+    var(--marfim);
+  min-height:100vh;
+}
+h1,h2{font-family:var(--serif);color:var(--rose-queimado);font-weight:700;line-height:1.2}
+[hidden]{display:none!important}
+
+/* ---------- botões ---------- */
+.btn,.chip{font:inherit;cursor:pointer;border:0;border-radius:999px;text-decoration:none;
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;transition:transform .15s}
+.btn{padding:.95rem 1.6rem;font-weight:600;min-height:52px}
+.btn:active{transform:scale(.97)}
+.btn-principal{background:var(--rose-queimado);color:#fff;box-shadow:0 3px 8px rgba(74,48,48,.3)}
+.btn-claro{background:#fff;color:var(--vinho)}
+.btn-bloco{display:flex;width:100%}
+.btn:disabled{opacity:.6;cursor:wait}
+.link{background:none;border:0;font:inherit;color:var(--rose-queimado);font-weight:600;cursor:pointer;padding:.7rem}
+input[type=text]{width:100%;padding:.9rem 1rem;font:inherit;border:1px solid var(--rose-claro);
+  border-radius:14px;background:#fff;color:var(--vinho)}
+input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #B46F6B;outline-offset:2px}
+
+/* ---------- página do convite (mobile primeiro) ---------- */
+.convite{max-width:520px;margin:0 auto}
+.arte img{display:block;width:100%;height:auto}
+.detalhes{padding:1.5rem 1.25rem 2.5rem;text-align:center}
+.detalhes h1{font-size:1.45rem;margin-bottom:.4rem}
+.anfitrioes{font-family:var(--serif);font-style:italic;margin-bottom:.3rem}
+.prazo{font-size:.95rem;margin-bottom:1.2rem}
+.info{list-style:none;display:grid;gap:.9rem;text-align:left;margin-bottom:1.2rem}
+.info li{display:flex;gap:.75rem;background:#fff;border-radius:16px;padding:.9rem 1rem;font-size:.95rem}
+.ico{font-size:1.3rem;color:var(--rose-antigo)}
+.mapa{position:relative;border-radius:16px;overflow:hidden;margin-bottom:1.5rem;height:170px;background:var(--rose-claro)}
+.mapa iframe{width:100%;height:100%;border:0}
+.mapa-link{position:absolute;top:8px;left:8px;background:#fff;color:#1a56b0;font-size:.8rem;
+  font-weight:600;padding:.35rem .7rem;border-radius:8px;text-decoration:none}
+.acoes{display:grid;gap:.75rem}
+
+@media (min-width:900px){
+  .pagina-convite{
+    background:
+      radial-gradient(ellipse at 20% 0%,rgba(255,255,255,.18),transparent 60%),
+      repeating-linear-gradient(0deg,rgba(40,10,10,.06) 0 2px,transparent 2px 6px),
+      var(--rose-queimado);
+    display:grid;place-items:center;padding:2rem;
+  }
+  .convite{max-width:1180px;display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:3rem}
+  .arte{background:var(--marfim);padding:1rem;border-radius:6px;box-shadow:0 10px 30px rgba(74,48,48,.35);transform:rotate(-1deg)}
+  .detalhes{text-align:left;color:#fff;padding:1rem}
+  .detalhes h1{color:#fff;font-size:2.1rem}
+  .anfitrioes,.prazo{color:#FDF7EC}
+  .info li{background:transparent;padding:0;color:#fff}
+  .ico{color:var(--rose-claro)}
+  .acoes{grid-template-columns:1fr auto;align-items:center}
+  .btn-principal{background:var(--vinho)}
+}
+
+/* ---------- lista de presentes ---------- */
+.folha{max-width:560px;margin:0 auto;padding:1.5rem 1.1rem 2.5rem;text-align:center}
+.selo{color:var(--rose-antigo);width:56px;height:56px;margin:0 auto .6rem;border-radius:50%;display:grid;place-items:center;
+  font-size:1.6rem;background:var(--rose-claro)}
+.selo.ok{background:var(--rose-queimado);color:#fff}
+.folha h1{font-size:1.7rem;margin-bottom:.5rem}
+.intro{font-size:.95rem;margin-bottom:1rem}
+.aviso{background:#E9D8D0;border-radius:12px;padding:.7rem 1rem;margin-bottom:1rem;font-size:.9rem}
+.chips{display:flex;gap:.5rem;overflow-x:auto;padding:.2rem 0 .8rem;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{padding:.6rem 1.1rem;background:#fff;color:var(--rose-queimado);border:1px solid var(--rose-claro);
+  white-space:nowrap;min-height:44px;font-weight:600}
+.chip.ativo{background:var(--rose-queimado);color:#fff;border-color:var(--rose-queimado)}
+.presentes,.resumo{list-style:none;display:grid;gap:.6rem;margin-bottom:1rem;text-align:left}
+.presente,.resumo li{display:flex;align-items:center;justify-content:space-between;gap:.6rem;
+  background:#fff;border:1px solid var(--rose-claro);border-radius:16px;padding:.5rem .9rem;min-height:60px}
+.presente label{display:flex;align-items:center;gap:.7rem;flex:1;cursor:pointer;min-width:0}
+.presente input{width:22px;height:22px;accent-color:var(--rose-queimado);flex:none}
+.icone{font-size:1.6rem;flex:none}
+.nome{font-size:.95rem;overflow-wrap:anywhere}
+.status{font-size:.75rem;font-weight:600;color:var(--rose-queimado);background:var(--rose-claro);
+  padding:.35rem .7rem;border-radius:999px;text-align:center;flex:none;max-width:42%}
+.presente.reservado{opacity:.55;background:#f3e9e4}
+.presente.reservado label{cursor:not-allowed}
+.resumo li{justify-content:flex-start}
+.resumo .nome{flex:1}
+.resumo .vazio{justify-content:center;font-style:italic}
+.x{background:none;border:0;font-size:1.5rem;color:var(--rose-queimado);cursor:pointer;width:44px;height:44px}
+.outro{margin-bottom:1rem}
+.outro input{margin-top:.4rem}
+.rotulo{display:block;text-align:left;font-weight:600;margin-bottom:.4rem}
+#nome{margin-bottom:1rem}
+.voltar{display:block;margin-top:1rem;color:var(--rose-queimado);font-size:.9rem}
+#btn-editar{display:block;margin:.5rem auto 0}
+@media (min-width:900px){
+  .pagina-lista{padding:2rem}
+  .folha{background:#fff;border-radius:24px;box-shadow:0 10px 40px rgba(74,48,48,.18);
+    padding:2.5rem;max-width:680px;margin:0 auto}
+  .presentes{grid-template-columns:1fr 1fr}
+}

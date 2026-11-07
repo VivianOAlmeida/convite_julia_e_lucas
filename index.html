@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chá da nossa Casa Nova</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina-convite">
+<main class="convite">
+  <figure class="arte">
+    <img src="convite-arte.png" alt="Convite: Chá da nossa Casa Nova. Venha comemorar com a gente!">
+  </figure>
+
+  <section class="detalhes">
+    <h1>Confirme sua presença e ajude a organizar a festa!</h1>
+    <!-- TODO: trocar pelo nome dos anfitriões -->
+    <p class="anfitrioes">Com carinho, [nome dos anfitriões]</p>
+    <p class="prazo">Prazo para confirmações até <strong>12/12/2026</strong></p>
+
+    <ul class="info">
+      <li><span class="ico">📅</span><span>12/12/2026 &nbsp;•&nbsp; 15h</span></li>
+      <li><span class="ico">📍</span>
+        <span><strong>Casa da mamãe</strong><br>
+        Rua Cristina Alves de Oliveira, 111 – Residencial Quadra Norte, Londrina – PR, 86087-556</span></li>
+    </ul>
+
+    <div class="mapa">
+      <iframe title="Mapa do local" loading="lazy"
+        src="https://maps.google.com/maps?q=Rua+Cristina+Alves+de+Oliveira,+111,+Londrina+PR&output=embed"></iframe>
+      <a class="mapa-link" target="_blank" rel="noopener"
+         href="https://www.google.com/maps/search/?api=1&query=Rua+Cristina+Alves+de+Oliveira,+111,+Londrina+PR">Abrir no Maps ↗</a>
+    </div>
+
+    <div class="acoes">
+      <a class="btn btn-principal" href="lista-presentes.html">Responder se vai</a>
+      <button class="btn btn-claro" id="btn-nao-vou" type="button">Não vou…</button>
+    </div>
+  </section>
+</main>
+
+<!-- Resposta "não vou": registra sem escolher presentes -->
+<dialog id="dlg-nao-vou">
+  <form method="dialog" id="form-nao-vou">
+    <h2>Que pena!</h2>
+    <p>Deixe seu nome para avisarmos que você não poderá vir.</p>
+    <input type="text" id="nome-nao-vou" placeholder="Digite seu nome aqui…" maxlength="80" required>
+    <p id="msg-nao-vou" role="status"></p>
+    <div class="acoes">
+      <button class="btn btn-principal" type="submit">Enviar resposta</button>
+      <button class="btn btn-claro" type="button" id="fechar-dlg">Fechar</button>
+    </div>
+  </form>
+</dialog>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
